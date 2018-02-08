@@ -1,20 +1,18 @@
-import { AppStoreState } from "./index";
-import { Map } from "immutable";
-import UserModel from "../../Model/UserModel";
+import { AppStoreState } from './index';
+import { Map } from 'immutable';
+import UserModel from '../../Model/UserModel';
 
-export  interface UserState
-{
+export  interface UserState {
     user:UserModel;
 }
 
-function defaultState () : AppStoreState
-{
-    const initialData =  {id: 0 ,userName : "no-one"};
+function defaultState (): AppStoreState {
+    let initialData =  {id: 0 ,userName : 'no-xxone'};
 
     return Map ({user : Map(initialData)});
 }
 
-export default function userReducer(state = defaultState(), action:any) {
+export default function userReducer(state:AppStoreState = defaultState(), action:any) {
 
     switch (action.type) {
 

@@ -3,7 +3,7 @@ import userReducer from './UserReducer';
 import { Map } from 'immutable';
 // import todoReducer from './TodoReducer';
 
-export type AppStoreState = Map<string,any>;
+export type AppStoreState = Map<string , any>;
 
 const rootReducer = combineReducers({
         // todoReducer,
